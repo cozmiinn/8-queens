@@ -9,17 +9,33 @@ function direction(board, row, col) {
             return false;
         }
     }
-    //checks the left corner direction
+    //checks left corner direction
     for (var i = row, j = col; i >= 0 && j >= 0; i--, j--) {
         if (board[i][j] == 1) {
             return false;
         }
     }
-    //checks the right corner direction
+    //checks right corner direction
     for (var i = row, j = col; j >= 0 && i < n; i++, j--) {
         if (board[i][j] == 1) {
             return false;
         }
     }
     return true;
+}
+
+function recursive(board, col){
+    if(col === n){
+        printfSolution(board);
+        //print another solution when the n=8
+        return;
+    }
+    for(var i = 0; i < n; i++){
+        if(direction(board, i, col)){
+            board[i][col] = 1;
+            recursive(board, col + 1);
+            board[i][col] = 0;
+        }
+    }
+    return false;
 }
