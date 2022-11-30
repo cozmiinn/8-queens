@@ -1,6 +1,6 @@
 var n = 8;
 
-solveNQ();
+solve();
 
 function direction(board, row, col) {
     //checks left direction
@@ -54,4 +54,14 @@ function genBoard(n) {
         }
     }
     return board;
+}
+
+function printfSolution(board) {
+    for (var i = 0; i < n; i++) {
+        for (var j = 0; j < n; j++) {
+            document.write(board[i][j] + " ");
+        }
+        document.write("<br>");
+    }
+    document.write("<br>");
 }
