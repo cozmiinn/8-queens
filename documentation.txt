@@ -1,0 +1,5 @@
+The eight queens problem is a classic problem in computer science where the goal is to place eight queens on a chessboard such that none of the queens are attacking each other. 
+This code uses a recursive approach to solve the problem. In the recursive() function, the code checks if all of the columns have been filled. 
+If they have, it prints out the solution by calling the printfSolution() function. If not, the code loops through all of the rows in the current column and tries to place a queen in each row.
+It then checks if the queen can be placed in that position by calling the direction() function. If the queen can be placed, the code places the queen on the board and calls the recursive() function again, 
+this time with the next column. If the queen cannot be placed, the code simply moves on to the next row and tries again. If no solution can be found for the current column, the code returns false.
